@@ -118,7 +118,7 @@ install_x-ui() {
 
     tar zxvf x-ui-${release}-${arch}.tar.gz
     rm -f x-ui-${release}-${arch}.tar.gz
-    cd x-ui
+    cd x-ui-0.0.1
     chmod +x x-ui bin/xray-${release}-${arch}
     #cp -f x-ui.service /etc/systemd/system/
     cp x-ui.sh ../x-ui.sh
