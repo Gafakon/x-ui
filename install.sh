@@ -96,7 +96,7 @@ install_x-ui() {
 
     if [ $# == 0 ]; then
         last_version=$(curl -Ls "https://api.github.com/repos/Gafakon/x-ui/releases/latest" | grep '"tag_name":' | sed -E 's/.*"([^"]+)".*/\1/')
-        wget -N --no-check-certificate -O x-ui-${release}-${arch}.tar.gz https://github.com/parentalclash/x-ui-freebsd/releases/download/${last_version}/x-ui-${release}-${arch}.tar.gz
+        wget -N --no-check-certificate -O x-ui-${release}-${arch}.tar.gz https://github.com/Gafakon/x-ui/releases/download/${last_version}/x-ui-${release}-${arch}.tar.gz
         if [[ $? -ne 0 ]]; then
             echo -e "${red}下载 x-ui 失败，请确保你的服务器能够下载 Github 的文件${plain}"
             exit 1
